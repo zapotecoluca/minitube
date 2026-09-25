@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #202020;
+}
+
+.topbar {
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    border-bottom: 1px solid #dddddd;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e62117;
+    text-decoration: none;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.pequeno {
+    max-width: 650px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #151515, #333333);
+    color: white;
+    padding: 55px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-top: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #dddddd;
+}
+
+.boton {
+    background-color: #e62117;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.grid-canales {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.canal-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #e2e2e2;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e62117;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.usuario {
+    color: #777777;
+}
+
+.form-card,
+.agregar-video {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #dddddd;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.perfil-canal {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+}
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-color: black;
+}
+
+.video-frame iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: none;
+}
+
+.video-info {
+    padding: 18px;
+}
+
+.vacio {
+    text-align: center;
+    padding: 40px;
+    color: #777777;
+}

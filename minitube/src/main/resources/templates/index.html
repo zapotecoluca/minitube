@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MiniTube</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">MiniTube</div>
+    <a href="/canales/nuevo" class="boton">+ Crear canal</a>
+</header>
+
+<main class="contenedor">
+
+    <section class="hero">
+        <h1>Tus videos favoritos. Tu propio canal.</h1>
+        <p>Crea un canal y guarda tus videos favoritos de YouTube.</p>
+    </section>
+
+    <h2>Canales</h2>
+
+    <div class="grid-canales">
+        <div class="canal-card" th:each="canal : ${canales}">
+            <div class="avatar">
+                <span th:text="${#strings.substring(canal.nombre,0,1)}"></span>
+            </div>
+
+            <h3 th:text="${canal.nombre}"></h3>
+            <p class="usuario">@<span th:text="${canal.usuario}"></span></p>
+            <p th:text="${canal.descripcion}"></p>
+            <p><strong th:text="${canal.videos.size()}"></strong> videos</p>
+
+            <a class="boton-secundario"
+               th:href="@{/canales/{id}(id=${canal.id})}">
+               Ver canal
+            </a>
+        </div>
+    </div>
+
+    <div class="vacio" th:if="${canales.empty}">
+        <h3>Todavía no hay canales</h3>
+        <p>Crea el primero.</p>
+    </div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear canal</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <a href="/" class="logo">MiniTube</a>
+</header>
+
+<main class="contenedor pequeno">
+
+    <div class="form-card">
+        <h1>Crear mi canal</h1>
+
+        <form action="/canales" method="post">
+
+            <label>Nombre del canal</label>
+            <input type="text"
+                   name="nombre"
+                   placeholder="Ej: Kelvin Tech"
+                   required>
+
+            <label>Usuario</label>
+            <input type="text"
+                   name="usuario"
+                   placeholder="Ej: kelvintech"
+                   required>
+
+            <label>Descripción</label>
+            <textarea name="descripcion"
+                      placeholder="¿De qué trata tu canal?"
+                      required></textarea>
+
+            <button type="submit" class="boton">
+                Crear canal
+            </button>
+
+        </form>
+    </div>
+
+</main>
+</body>
+</html>
